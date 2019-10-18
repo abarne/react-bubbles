@@ -39,7 +39,7 @@ class NewBubbleForm extends React.Component {
 			.post(`/api/colors`, newBubble)
 			.then((response) => {
 				console.log(response);
-				this.refeshPage();
+				this.refreshPage();
 			})
 			.catch((err) => console.log(err.response));
 	};
@@ -51,7 +51,9 @@ class NewBubbleForm extends React.Component {
 		return (
 			<div>
 				<form onSubmit={this.createBubble}>
+					Color Name:
 					<input type="text" name="color" value={this.state.name} onChange={this.handleChange} />
+					Hex Code:
 					<input type="text" name="hex" value={this.state.hex} onChange={this.handleHex} />
 					<button>Add bubble</button>
 				</form>
