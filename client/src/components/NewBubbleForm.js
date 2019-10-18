@@ -18,7 +18,7 @@ class NewBubbleForm extends React.Component {
 		this.setState({
 			...this.state,
 			code: {
-				Hex: e.target.value
+				hex: e.target.value
 			}
 		});
 	};
@@ -26,7 +26,7 @@ class NewBubbleForm extends React.Component {
 	createBubble = (e) => {
 		e.preventDefault();
 		const newBubble = {
-			id: Date.now(),
+			// id: Date.now(),
 			color: this.state.color,
 			code: this.state.code
 		};
