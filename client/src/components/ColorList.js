@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { axiosWithAuth } from './utils/axiosWithAuth';
+import NewBubbleForm from './NewBubbleForm';
 
 const initialColor = {
 	color: '',
@@ -97,6 +98,7 @@ const ColorList = ({ colors, updateColors }) => {
 			)}
 			<div className="spacer" />
 			{/* stretch - build another form here to add a color */}
+			<NewBubbleForm />
 		</div>
 	);
 };
